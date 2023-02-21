@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>【2月20日更新】テストアプリ</title>
+        <title>テストアプリ</title>
         <script>
+            <!--
+            関数 updateLux
+            引数 (url,element)
+            --> 
             const updateLux = async(url,element)=>{
                 const sensorData = await fetch(url)
                 .then(response =>response.text())
@@ -14,7 +18,7 @@
 <body onLoad = "updateLux('lux','data')">
     <center>
     <div id = "data">test</div>
-    <input type = "button" value="更新"onclick="updateLux('/lux','data')">
+    <input type = "button" value = "更新" onclick = "updateLux('/lux','data')">
     </center>
     </body>
     </html>
