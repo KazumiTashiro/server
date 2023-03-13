@@ -3,10 +3,7 @@
     <head>
         <title>テストアプリ</title>
         <script>
-            <!--
-            関数 updateLux
-            引数 (url,element)
-            --> 
+            
             const updateLux = async(url,element)=>{
                 const sensorData = await fetch(url)
                 .then(response =>response.text())
