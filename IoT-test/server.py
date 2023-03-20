@@ -16,7 +16,7 @@ def get_html():
 
 @app.route('/state',methods=['POST'])
 def update_state():
-    time = request.form["time"]
+    time = request.form["time"]    
     state = request.form["state"]
     count = request.form["count"]   
     #book_store.to_csv(r"/home/selab/20022/server1/book_store.csv")

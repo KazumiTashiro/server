@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>テストアプリ</title>
+        <title>ジャンル-時間-取得回数</title>
         <script>            
             const updatestate = async(url,element)=>{
                 const state = await fetch(url)
@@ -11,7 +11,7 @@
             }
         </script>
     </head>
-<body onLoad = "updatestate('state','state')">
+<body onLoad = "updatestate('state','data')">
     <center>
     <div id = "data">data</div>
     <input type = "button" value = "本棚情報更新" onclick = "updatestate('/state','data')">
