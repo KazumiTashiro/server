@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>テストアプリ</title>
+        <script>            
+            const updatestate = async(url,element)=>{
+                const state = await fetch(url)
+                .then(response =>response.text())
+                const target = document.getElementById(element)
+                target.innerHTML=`<h1>${state}</h1>` 
+            }
+        </script>
+    </head>
+<body onLoad = "updatestate('state','state')">
+    <center>
+    <div id = "data">data</div>
+    <input type = "button" value = "本棚情報更新" onclick = "updatestate('/state','data')">
+    </center>
+    </body>
+    </html>
