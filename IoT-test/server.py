@@ -25,7 +25,7 @@ def update_state():
         book_store.at["locate_A","state"] = state
         book_store.at["locate_A","time"] = time
         book_store.at["locate_A","count"] = count  
-        book_store.to_csv(r"/home/selab/20022/server1/book_store.csv")
+        book_store.to_csv(r"/home/selab/20022/Iot-test/server/IoT-test/book_store.csv")
         #f = open(file_path,'w')
         #f.write(time+","+state)
         return "succeeded to write"
