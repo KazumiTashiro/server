@@ -8,7 +8,7 @@ list1 = [["NULL","NULL","NULL"],["NULL","NULL","NULL"],["NULL","NULL","NULL"]]
 index1 = ["locate_A","locate_B","locate_C"]
 columns1 = ["state","time","count"]
 book_store = pd.DataFrame(data = list, index = index1, columns = columns1)
-book_store.to_csv(r"/home/selab/20022/server1/book_store.csv")
+book_store.to_csv(r"/home/selab/20022/Iot-test/server/IoT-test/book_store.csv")
 
 @app.route('/',methods=['GET'])
 def get_html():
@@ -40,8 +40,6 @@ def update_state():
 @app.route('/state',methods=['GET'])
 def get_state():
     try:
-        #f = open(file_path,'r')
-        #for row in f:
         state = book_store.at["locate_A","state"]
         time = book_store.at["locate_A","time"]
         count = book_store.at["locate_A","count"]
@@ -53,4 +51,4 @@ def get_state():
         return ( state + "," + time + "," + count )
 
 if __name__=='__main__':
-    app.run(debug=True,host='0.0.0.0',port=port_num)        
+    app.run(debug=True,host='0.0.0.0',port = port_num)        
